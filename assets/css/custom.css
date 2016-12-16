@@ -86,6 +86,9 @@ nav a:hover,
     position: relative;
     overflow-y: none;}
 
+.timeline a {
+    color: antiquewhite;
+}
 .timeline ul li {
     list-style-type: none;
     position: relative;
