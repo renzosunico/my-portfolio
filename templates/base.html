@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio | John Renzo S. Sunico</title>
+        <meta name="description" content="Contains data about John Renzo S. Sunico">
+        <meta name="author" content="John Renzo S. Sunico">
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+        <script src="{% static 'css/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </head>
+    <body>
+        {% block navbar %}{% include 'navbar.html' %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
