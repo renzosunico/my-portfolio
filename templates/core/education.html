@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header%}
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="content-container container">
+    <div class="education-con">
+        <div class="educations">
+            <h1 class="title">Educational Background</h1>
+            <hr>
+
+            <div class="clearfix mbot-20"></div>
+
+            <!-- College -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="http://www.sti.edu/campuses.asp?campus_id=22">
+                        <img class="media-object" src="{% static 'img/education/sti-100x100.png' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">STI College Balagtas</h4>
+                    Associate in Computer Technology (ASCT)
+                    <br>
+                    June 2013 - May 2015
+                    <br>
+                    <a href="#">View Location</a>
+                </div>
+            </div>
+
+            <div class="clearfix mbot-25"></div>
+
+            <!-- Highschool -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="https://www.facebook.com/Malolos-Marine-Fishery-School-and-Laboratory-178147452218369/">
+                        <img class="media-object" src="{% static 'img/education/mmfsl-100x100.jpg' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Malolos Marine Fishery School And Laboratory</h4>
+                    June 2009 - March 2013 <br>
+                    <a href="#">View Location</a>
+                </div>
+            </div>
+
+            <div class="clearfix mbot-25"></div>
+
+            <!-- Elementary -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="http://public-schools.findthebest.com.ph/l/35479/Marcelo-H-Del-Pilar-Memorial-School-in-Bulacan-BUL">
+                        <img class="media-object" src="{% static 'img/education/no-icon.png' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Marcelo H. Del Pilar Memorial School</h4>
+                    June 2004 - March 2009 <br>
+                    <a href="#">View Location</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

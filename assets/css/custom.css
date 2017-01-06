@@ -1,21 +1,26 @@
-* {
-    color: white;
-    font-family: sans-serif; }
-
 html {
     height: 100%; }
 
 body {
-    background: #1958b0; /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(at bottom, #a7cbfd, #1958b0); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(at bottom, #a7cbfd, #1958b0); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(at bottom, #a7cbfd, #1958b0); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(at bottom, #a7cbfd, #1958b0); /* Standard syntax */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
     height: 100%;
     margin: 0; }
 
+nav {
+    background-color: rgba(255, 255, 255, .2);
+    width: 100%;
+    height: 100px;
+    position: relative; }
+nav .navbar-container {
+    margin: 0px 40px 0px 40px;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);}
+nav .navbar-header > * {
+    color: white; }
 nav a {
     color: white; }
 nav a:hover,
@@ -45,6 +50,23 @@ nav a:hover,
     top: 15%;
 }
 
+.mbot-5 { margin-bottom: 5px; }
+.mbot-10 { margin-bottom: 10px; }
+.mbot-15 { margin-bottom: 15px; }
+.mbot-20 { margin-bottom: 20px; }
+.mbot-25 { margin-bottom: 25px; }
+
+@keyframes blinking {
+    0% {color: blue;}
+    50% {color: red;}
+    100% {color: green;}
+}
+
+.content-container {
+    position: relative;
+    margin-top: 150px;
+}
+
 .front-page-container {
     display: block;
     position: relative;
@@ -53,21 +75,24 @@ nav a:hover,
     width: 100%;
     height: 100%; }
 .front-page {
-    background: url('/static/me-img/happy-cover.png') no-repeat;
-    background-size: cover;
-    background-position: 30% 50%;
+    /*background: url('/static/me-img/happy-cover-no-bg.png') no-repeat;*/
+    /*background-size: cover;
+    background-position: 30% 50%;*/
     display: table;
     text-align: left;
     width: 100%;
     height: 60%; }
     .front-page .text {
-        float: right;
-        max-width: 500px;
+        float: left;
+        /*max-width: 500px;*/
         padding-top: 150px;
         padding-left: 20px;
         padding-right: 20px;
         width: 100%; }
     .front-page .text p.title {
+        animation: pulse 0.5s infinite alternate;
+        animation-name: blinking;
+        animation-duration: 1s;
         font-size: 70px;
         margin: 0; }
     .front-page .text p.sub-title {
@@ -186,3 +211,16 @@ nav a:hover,
     margin: 30px;
     padding: 50px;
 }
+
+
+.education-con {
+    background-color: white;
+    display: block;
+    height: 100%;
+    color: black; }
+.educations {
+    font-family: 'Lora', serif;
+    padding: 100px 50px 100px 50px; }
+    .educations .title {
+        /*padding: 50px 50px 0px 50px;*/
+    }

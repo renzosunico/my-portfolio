@@ -13,15 +13,16 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
         <![endif]-->
 
+        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+        <script src="{% static 'css/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
         <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap-theme.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
         <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-
-        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
-        <script src="{% static 'css/bootstrap/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/custom.js' %}"></script>
+        {% block header %}{% endblock %}
     </head>
     <body>
         {% block navbar %}{% include 'navbar.html' %}{% endblock %}
