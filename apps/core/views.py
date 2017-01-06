@@ -12,3 +12,9 @@ class EducationTemplateView(TemplateView):
     """Displays educational background."""
 
     template_name = 'core/education.html'
+
+
+class ExperienceTemplateView(TemplateView):
+    """Displays experiences."""
+
+    template_name = 'core/experience.html'

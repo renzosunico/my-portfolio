@@ -213,12 +213,12 @@ nav a:hover,
 }
 
 
-.education-con {
+.pages-con {
     background-color: white;
     display: block;
     height: 100%;
     color: black; }
-.educations {
+.page {
     font-family: 'Lora', serif;
     padding: 100px 50px 100px 50px; }
     .educations .title {
