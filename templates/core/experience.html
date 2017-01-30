@@ -12,10 +12,17 @@
             <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
         </div>
         <div class="maps-view">
-            <iframe src="//www.google.com/maps/embed/v1/place?q=Klab Cyscorpions
-                &zoom=14
-                &key={{MAP_API_KEY}}">
-            </iframe>
+            <iframe src="//www.google.com/maps/embed/v1/place?q=Klab Cyscorpions&zoom=14&key={{MAP_API_KEY}}"></iframe>
+        </div>
+    </div>
+</div>
+<div id="lods-site" class="popup-con">
+    <div class="popup">
+        <div class="close-button">
+            <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
+        </div>
+        <div class="maps-view">
+            <iframe src="https://www.playlods.com/"></iframe>
         </div>
     </div>
 </div>
@@ -43,7 +50,7 @@
                     <br>
                     June 2015 - January 2017
                     <br>
-                    <a id="klab-loc" href="#">View Location</a>
+                    <a class="location" data-map="klab-map" href="#">View Location</a>
                 </div>
             </div>
 
@@ -82,20 +89,11 @@
                 <div class="media-body">
                     <h4 class="media-heading">Lord of the Dragons (Backend/Operations)</h4>
                     Lord of the Dragons is a social RPG game available <br> both Android and IOS.
-                    <br><a href="https://www.playlods.com/">Visit Website</a>
+                    <br><a class="location" data-map="lods-site" href="#">Visit Website</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-{% endblock %}
-
-{% block scripts %}
-<script type="text/javascript">
-    $('#klab-loc').click(function(){
-        $('#klab-map').fadeIn();
-    });
-
-</script>
 {% endblock %}

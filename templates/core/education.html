@@ -102,12 +102,3 @@
     </div>
 </div>
 {% endblock %}
-
-{% block scripts %}
-<script type="text/javascript">
-    $('a.location').click(function(){
-        var loc = $(this).data('map');
-        $('#' + loc).fadeIn();
-    });
-</script>
-{% endblock %}

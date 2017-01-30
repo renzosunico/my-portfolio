@@ -11,8 +11,15 @@ function unblur(selector, from=10, to=0) {
     });
 }
 
+// Pop up Section
+
 $('a.button').click(function(){
     $(this).parents('.popup-con').fadeOut();
+});
+
+$('a.location').click(function(){
+    var loc = $(this).data('map');
+    $('#' + loc).fadeIn();
 });
 
 $(document).scroll(function() {
