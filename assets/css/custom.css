@@ -12,13 +12,15 @@ nav {
     background-color: rgba(255, 255, 255, .2);
     width: 100%;
     height: 100px;
-    position: relative; }
+    position: fixed;
+    z-index: 1; }
 nav .navbar-container {
     margin: 0px 40px 0px 40px;
     position: relative;
     text-align: center;
     top: 50%;
-    transform: translateY(-50%);}
+    transform: translateY(-50%);
+    z-index: 2000; }
 nav .navbar-header > * {
     color: white; }
 nav a {
@@ -138,7 +140,7 @@ nav a:hover,
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background: #F45B69;
+    background: #2f6f7e;
 }
 
 .timeline ul li div::before {
@@ -157,7 +159,7 @@ nav a:hover,
 .timeline ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
+    border-color: transparent #2f6f7e transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -167,7 +169,7 @@ nav a:hover,
 .timeline ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #F45B69;
+    border-color: transparent transparent transparent #2f6f7e;
 }
 
 .timeline ul li::after {
@@ -176,7 +178,7 @@ nav a:hover,
 }
 
 .timeline ul li.in-view::after {
-  background: #F45B69;
+  background: #2f6f7e;
 }
 
 .timeline ul li div {
@@ -223,4 +225,36 @@ nav a:hover,
     padding: 100px 50px 100px 50px; }
     .educations .title {
         /*padding: 50px 50px 0px 50px;*/
+    }
+
+.maps-view {
+    width: 100%;
+    height: 100%; }
+    .maps-view iframe {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+
+
+.popup-con {
+    background-color: rgba(255, 255, 255, .1);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5000; }
+    .popup {
+        height: 80%;
+        width: 80%;
+        background-color: white;
+        margin: 3% 10% 5% 10%; }
+    .close-button {
+        float: right;
+        margin: 10px; }
+    .close-button .button {
+        cursor: pointer;
     }

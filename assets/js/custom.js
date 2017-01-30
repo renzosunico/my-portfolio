@@ -10,3 +10,18 @@ function unblur(selector, from=10, to=0) {
         }
     });
 }
+
+$('a.button').click(function(){
+    $(this).parents('.popup-con').fadeOut();
+});
+
+$(document).scroll(function() {
+    nav = parseInt($('.content-container').css('margin-top'), 10);
+    nav_height = $('nav').height();
+
+    start_change = nav - nav_height;
+    scroll_start = $(this).scrollTop();
+    color = scroll_start > start_change ? 'black' : 'rgba(255, 255, 255, .2)';
+
+    $("nav").css('background-color', color);
+});

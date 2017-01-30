@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<a id="top"></a>
+<div id="timeline" class="content-container timeline-container">
+    <section class="intro">
+        <div class="container">
+            <h1 class="center-text">Brief History</h1>
+        </div>
+    </section>
+    <section class="timeline">
+        <ul>
+            <li>
+                <div>
+                    <time>Fifthteenth of October, 1996.</time>
+                    A beautiful woman named Anita Saclolo Sunico gave birth
+                    to an awesome child at San Roque Hospital situated
+                    in Liang, Malolos, Bulacan. The woman and her husband,
+                    Richard De Leon Sunico decided to name the child
+                    John Renzo Saclolo. Sunico.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>March, 2009.</time>
+                    The child have grown so fast and now people use to call
+                    him "renzo". He graduated grade school. That school was
+                    Marcelo H. Del Pilar Memorial School.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>Fast forward to April 2013.</time>
+                    Renzo did graduate high school at
+                    Malolos Marine Fishery School and Laboratory. His
+                    high school days were remarkable and was awarded as
+                    Best in Computer on their graduation day.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>May of 2013.</time>
+                    He pursued his love and interest of computer and
+                    technology and graduated at STI College Balagtas with
+                    associate degree on Computer Technology.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>June 01, 2016.</time>
+                    Renzo had the chance to work for Klab Cyscorpions. Before
+                    starting the actual work, he was trained in using PHP
+                    programming language on their Training Center department
+                    for four months.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>September 2016.</time>
+                    He was transfered from Training Center Department to
+                    another department, a department that focuses on developing
+                    and maintaining operations of
+                    <a href="https://play.google.com/store/apps/details?id=com.klab.lods.en">Lord of the Dragons</a>.
+                    He was assigned in operations where he learned more in
+                    maintaining server operations. He is also one of the backend
+                    developer of that department.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>December 2016.</time>
+                    The departments has to be restructured in their company.
+                    He was transfered to another department where he learned
+                    how to use Python, Django Framework, and React.js. His skill
+                    in HTML and Javascript is also enhanced when he started
+                    to help in developing <a href="https://www.novicedge.com/">
+                    NovicEdge</a>. A job matching site.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>Present Time. </time>
+                    Right now, he still works at Klab Cyscorpions and is still
+                    on the same department as before.
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+<div class="clearfix"></div>
+<div class="footer">
+    <div class="to-top" class="">
+        <a id="toTop" class="btn btn-lg btn-success" href="#">Back to Top</a>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+    $('#whoami').on('click', function(){
+        $("html, body").animate({scrollTop: $('#timeline').offset().top}, 1000);
+    });
+
+    $('#toTop').on('click', function(){
+        $("html, body").animate({scrollTop: $('#top').offset().top}, 1000);
+    });
+
+    $(window).on('load', () => unblur('.front-page'));
+
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    var items = document.querySelectorAll(".timeline li");
+
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        } else {
+          items[i].classList.remove("in-view");
+        }
+      }
+    }
+
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+</script>
+{% endblock %}

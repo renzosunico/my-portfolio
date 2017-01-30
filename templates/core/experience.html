@@ -5,6 +5,22 @@
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 {% endblock %}
 
+{% block popup %}
+<div id="klab-map" class="popup-con">
+    <div class="popup">
+        <div class="close-button">
+            <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
+        </div>
+        <div class="maps-view">
+            <iframe src="//www.google.com/maps/embed/v1/place?q=Klab Cyscorpions
+                &zoom=14
+                &key={{MAP_API_KEY}}">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="content-container container">
     <div class="pages-con">
@@ -27,7 +43,7 @@
                     <br>
                     June 2015 - January 2017
                     <br>
-                    <a href="#">View Location</a>
+                    <a id="klab-loc" href="#">View Location</a>
                 </div>
             </div>
 
@@ -69,10 +85,17 @@
                     <br><a href="https://www.playlods.com/">Visit Website</a>
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>
 
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+    $('#klab-loc').click(function(){
+        $('#klab-map').fadeIn();
+    });
+
+</script>
 {% endblock %}

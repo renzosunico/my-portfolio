@@ -95,3 +95,6 @@ STATIC_ROOT = str(BASE_DIR.path('static'))
 STATICFILES_DIRS = [
     str(BASE_DIR.path('assets'))
 ]
+
+# Map API
+MAP_API_KEY = env('MAP_API_KEY', default="")

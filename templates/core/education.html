@@ -5,6 +5,42 @@
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 {% endblock %}
 
+{% block popup %}
+<div id="college-map" class="popup-con">
+    <div class="popup">
+        <div class="close-button">
+            <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
+        </div>
+        <div class="maps-view">
+            <iframe src="//www.google.com/maps/embed/v1/place?q=STI College Balagtas&zoom=14&key={{MAP_API_KEY}}">
+            </iframe>
+        </div>
+    </div>
+</div>
+<div id="hs-map" class="popup-con">
+    <div class="popup">
+        <div class="close-button">
+            <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
+        </div>
+        <div class="maps-view">
+            <iframe src="//www.google.com/maps/embed/v1/place?q=Malolos Marine Fishery School And Laboratory&zoom=14&key={{MAP_API_KEY}}">
+            </iframe>
+        </div>
+    </div>
+</div>
+<div id="elem-map" class="popup-con">
+    <div class="popup">
+        <div class="close-button">
+            <a class="button" href="#"><span class="glyphicon glyphicon-remove"></span> Close</a>
+        </div>
+        <div class="maps-view">
+            <iframe src="//www.google.com/maps/embed/v1/place?q=Marcelo H. Del Pilar Memorial School&zoom=14&key={{MAP_API_KEY}}">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="content-container container">
     <div class="pages-con">
@@ -27,7 +63,7 @@
                     <br>
                     June 2013 - May 2015
                     <br>
-                    <a href="#">View Location</a>
+                    <a class="location" data-map="college-map" href="#">View Location</a>
                 </div>
             </div>
 
@@ -43,7 +79,7 @@
                 <div class="media-body">
                     <h4 class="media-heading">Malolos Marine Fishery School And Laboratory</h4>
                     June 2009 - March 2013 <br>
-                    <a href="#">View Location</a>
+                    <a class="location" data-map="hs-map" href="#">View Location</a>
                 </div>
             </div>
 
@@ -59,10 +95,19 @@
                 <div class="media-body">
                     <h4 class="media-heading">Marcelo H. Del Pilar Memorial School</h4>
                     June 2004 - March 2009 <br>
-                    <a href="#">View Location</a>
+                    <a class="location" data-map="elem-map" href="#">View Location</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+    $('a.location').click(function(){
+        var loc = $(this).data('map');
+        $('#' + loc).fadeIn();
+    });
+</script>
 {% endblock %}
