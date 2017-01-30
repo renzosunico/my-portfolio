@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header%}
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="content-container container">
+    <div class="pages-con">
+        <div class="page">
+            <h1 class="title">Experience</h1>
+            <hr>
+
+            <div class="clearfix mbot-20"></div>
+
+            <!-- Klab Cyscorpions -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="http://www.cyscorpions.com/">
+                        <img class="media-object" src="{% static 'img/experience/klab.png' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Klab Cyscorpions</h4>
+                    Junior Software Engineer
+                    <br>
+                    June 2015 - January 2017
+                    <br>
+                    <a href="#">View Location</a>
+                </div>
+            </div>
+
+            <div class="clearfix mbot-25"></div>
+            <div class="clearfix mbot-25"></div>
+
+            <!-- Projects -->
+            <h1 class="title">Notable Projects</h1>
+            <hr>
+
+            <div class="clearfix mbot-20"></div>
+
+            <!-- Novicedge -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="https://www.novicedge.com/about-us/">
+                        <img class="media-object" src="{% static 'img/experience/e.png' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">NovicEdge (Web/Backend)</h4>
+                    A job portal site that aims to provide job seekers <br> a better and new experience in finding their jobs.
+                    <br><a href="https://www.novicedge.com/about-us/">Visit Website</a>
+                </div>
+            </div>
+
+            <div class="clearfix mbot-25"></div>
+
+            <!-- Lord of the Dragons -->
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="https://www.playlods.com/">
+                        <img class="media-object" src="{% static 'img/experience/lods.jpg' %}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Lord of the Dragons (Backend/Operations)</h4>
+                    Lord of the Dragons is a social RPG game available <br> both Android and IOS.
+                    <br><a href="https://www.playlods.com/">Visit Website</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
